@@ -48,7 +48,7 @@ else
 
     if [ ! -z "$INPUT_BUILD_ARGS" ]; then
         for ARG in $(echo "$INPUT_BUILD_ARGS" | tr ',' '\n'); do
-            BUILD_PARAMS="$BUILD_PARAMS --build-arg --progress=plain --no-cache ${ARG}"
+            BUILD_PARAMS="$BUILD_PARAMS --build-arg ${ARG} --progress=plain --no-cache"
         done
     fi
 
